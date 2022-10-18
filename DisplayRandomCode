@@ -1,0 +1,10 @@
+load GridPosY;
+load GridPosZ;
+randomDisplay = zeros(900,900);
+numCode = numel(GridPosY);
+for i =1:numCode
+    indexY = GridPosY(i)*10+450;
+    indexZ = GridPosZ(i)*10+450;
+    randomDisplay(indexZ-4:indexZ+4,indexY-4:indexY+4)=1;
+end
+imshow(randomDisplay);
